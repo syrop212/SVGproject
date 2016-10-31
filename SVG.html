@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MY SVG</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="SVG.css">
+  </head>
+  <h1>My SVG design</h1>
+  <body>
+    <!-- page content -->
+    <svg width="100%" viewBox="0 0 600 400" style="background-color: #2E1E36">
+<!--Moon-->
+    <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red">
+      <animate id="newToFull" attributeName="opacity" from="1" to="0" dur="5s" begin="0s;fullToNew"/>
+      <animate id="fullToNew" attributeName="opacity" from="0" to="1" dur="5s" begin="newToFull"/>
+    </circle>
+    
+    <circle cx="110" cy="50" r="30" stroke="black" stroke-width="2" fill="#59316B" />
+
+
+   <!--land-->
+   <rect x="0" y="200" width="800" height="200" fill="green"/>
+<!--Ocean-->
+  <rect x="0" y="220" width="900" height="190" fill="blue"/>
+
+    </svg>
+
+  </body>
+</html>
