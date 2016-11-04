@@ -6,43 +6,69 @@
     <link rel="stylesheet" type="text/css" href="SVG.css">
   </head>
   <h1>My SVG design</h1>
-  <p>Where is he going?</p>
+  <p>They are play fetch at Jurassic Park III</p>
   <body>
     <!-- page content -->
     <svg width="100%" viewBox="0 0 600 250">
    <!--sky-->
    <rect x="0" y="0" width="600" height="300" fill="#784799" opacity="1">
-     <animate id="darkToLight" attributeName="opacity" from="1" to="0" dur="2s" begin="0s; lightToDark.end"/>
-     <animate id="lightToDark" attributeName="opacity" from="0" to="1" dur="2s" begin="darkToLight.end"/>
+     <animate id="darkToLight" attributeName="opacity" from="1" to="0" dur="3s" begin="0s; lightToDark.end"/>
+     <animate id="lightToDark" attributeName="opacity" from="0" to="1" dur="3s" begin="darkToLight.end"/>
 
 
    </rect>
 
 <!--Moon-->
     <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red" opacity="1">
-      <animate id="newToFull" attributeName="opacity" from="1" to="0" dur="2s" begin="0s; fullToNew.end"/>
-      <animate id="fullToNew" attributeName="opacity" from="0" to="1" dur="2s" begin="newToFull.end"/>
+      <animate id="newToFull" attributeName="opacity" from="1" to="0" dur="3s" begin="0s; fullToNew.end"/>
+      <animate id="fullToNew" attributeName="opacity" from="0" to="1" dur="3s" begin="newToFull.end"/>
     </circle>
 
     <circle cx="110" cy="50" r="30" stroke="black" stroke-width="2" fill="#59316B" opacity="1">
-      <animate id="clearToNo" attributeName="opacity" from="1" to="0" dur="2s" begin="0s; noToClear.end"/>
-      <animate id="noToClear" attributeName="opacity" from="0" to="1" dur="2s" begin="clearToNo.end"/>
+      <animate id="clearToNo" attributeName="opacity" from="1" to="0" dur="3s" begin="0s; noToClear.end"/>
+      <animate id="noToClear" attributeName="opacity" from="0" to="1" dur="3s" begin="clearToNo.end"/>
     </circle>
 
 <!--Sun-->
     <circle cx="500" cy="50" r="40" stroke="black" stroke-width="2" fill="#F5F53C" opacity="0">
-    <animate id="nightToDay" attributeName="opacity" from="0" to="1" dur="2s" begin="0s; dayToNight.end"/>
-    <animate id="dayToNight" attributeName="opacity" from="1" to="0" dur="2s" begin="nightToDay.end"/>
+    <animate id="nightToDay" attributeName="opacity" from="0" to="1" dur="3s" begin="0s; dayToNight.end"/>
+    <animate id="dayToNight" attributeName="opacity" from="1" to="0" dur="3s" begin="nightToDay.end"/>
     </circle>
 
    <!--land-->
    <rect x="0" y="200" width="800" height="200" fill="green"/>
 
    <!--dog-->
-   <image x="320" y="175" width="45" height="45" xlink:href="https://www.netanimations.net/Moving-picture-little-puppy-dog-running-animated-gif.gif"/>
+   <image x="320" y="185" width="45" height="45" xlink:href="https://www.netanimations.net/Moving-picture-little-puppy-dog-running-animated-gif.gif">
+     <animate attributeName="x" from="320" to="100" dur="5s" fill="freeze"/>
+     <animate attributeName="y" from="185" to="100" dur="2s" begin="click"/>
+     <animate attributeName="x" from="100" to="50" dur="2s" begin="click"/>
+
+   </image>
 
    <!--guy-->
    <polygon points="300 160 270 200 250 160 300" fill="grey"/>
+   <circle cx="275" cy="150" r="15" fill="grey"/>
+   <text x="220" y="145" font-family="serif" font-size="10px" fill="black" opacity="0">
+     <animate attributeName="opacity" from="0" to="1" dur="2s" begin="mouseover" fill="freeze"/>
+     Fetch Boy
+   </text>
+   <rect x="235" y="160" width="20" height="10" fill="grey"/>
+
+   <!--firsby-->
+   <ellipse cx=230 cy="160" rx="15" ry="10" fill="#E51146">
+     <animate attributeName="cx" from="230" to="70" dur="5s" fill="freeze"/>
+   </ellipse>
+
+   <!--Park Name-->
+   <image x="500" y="115" width="55" height="55" xlink:href="https://upload.wikimedia.org/wikipedia/de/thumb/2/24/Lostworld3-logo-o.svg/280px-Lostworld3-logo-o.svg.png"/>
+   <rect x="523" y="161" width="10" height="55"/>
+
+   <!--Spino-->
+   <image x="480" y="0" width="600" height="210" xlink:href="http://vignette2.wika.nocookie.net/vsbattles/images/0/03/Spino.png/revision/latest?cb=20151205002633">
+     <animate id="spino" attributeName="x" from="480" to="540" dur="5s" begin="0s; dino.end"/>
+     <animate te id="dino" attributeName="x" from="540" to="480" dur="5s" begin="spino.end"/>
+   </image>
 
 
     </svg>
